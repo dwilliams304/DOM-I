@@ -38,5 +38,53 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
     "accent-img": "http://localhost:9000/img/accent.png",
   },
 };
+//----IMAGES----\\
+//Assign variables
+const logoImg = document.querySelector('#logo-img');
+const ctaImg = document.querySelector('#cta-img');
+const accentImg = document.querySelector('#middle-img');
+//Changes src of each img.
+logoImg.src = siteContent['images']['logo-img'];
+ctaImg.src = siteContent['images']['cta-img'];
+accentImg.src = siteContent['images']['accent-img'];
+//----END----\\
 
-console.log('project wired!')
+
+
+//----NAVBAR && CTA----\\
+//Assign variables
+const navBar = document.querySelector('nav');
+const header = document.querySelector('h1');
+const getStartedBtn = document.querySelector('button');
+
+header.textContent = siteContent['cta']['h1'];
+getStartedBtn.textContent = siteContent['cta']['button'];
+//----END----\\
+
+
+
+//----MAIN CONTENT----\\
+
+//----END-----\\
+
+
+
+//----FOOTER && CONTACT----\\
+//--Contact
+//Assign variables
+const contactHeader = document.querySelector('.contact h4');
+const contactAddress = document.querySelector('.contact p:nth-of-type(1)');
+const contactPhone = document.querySelector('.contact p:nth-of-type(2)');
+const contactEmail = document.querySelector('.contact p:nth-of-type(3)');
+//Change text content
+contactHeader.textContent = siteContent['contact']['contact-h4'];
+contactAddress.textContent = siteContent['contact']['address'];
+contactPhone.textContent = siteContent['contact']['phone'];
+contactEmail.textContent = siteContent['contact']['email'];
+//--Footer
+//Assign variables
+const footer = document.querySelector('footer');
+//Add class and textcontent
+footer.classList.add('bold');
+footer.textContent = siteContent['footer']['copyright'];
+//----END----\\
