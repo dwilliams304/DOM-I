@@ -30,8 +30,8 @@ Inside `src/index.js` there is declared an object literal containing all the dat
 
 ### Add text contents
 
-* [ ] Using your selectors, update the text contents of the relevant elements, matching the design file.
-* [ ] Find the correct texts for the elements inside the data object in `src/index.js`.
+* [x] Using your selectors, update the text contents of the relevant elements, matching the design file.
+* [x] Find the correct texts for the elements inside the data object in `src/index.js`.
 
 ### Add class names
 

@@ -52,14 +52,21 @@ accentImg.src = siteContent['images']['accent-img'];
 
 
 //----NAVBAR && CTA----\\
+//==NavBar
 //Assign variables
 const navBar = document.querySelector('nav');
 const navBarLinks = document.querySelectorAll('nav a');
-const header = document.querySelector('h1');
-const getStartedBtn = document.querySelector('button');
+const navBarText = Object.values(siteContent.nav);
 
-navBarLinks.forEach(link => link.classList.add('italic'));
-
+navBarLinks.forEach((link, i) => {
+  link.classList.add('italic')
+  link.textContent = navBarText[i];
+});
+//--CTA
+//Assign variables
+const header = document.querySelector('.cta h1');
+const getStartedBtn = document.querySelector('.cta button');
+//Change text content
 header.textContent = siteContent['cta']['h1'];
 getStartedBtn.textContent = siteContent['cta']['button'];
 
@@ -69,8 +76,29 @@ getStartedBtn.textContent = siteContent['cta']['button'];
 
 
 //----MAIN CONTENT----\\
+//--Top Content
+//Assign variables
 const topContent = document.querySelector('.top-content')
+const headersTop = topContent.querySelectorAll('h4');
+const textTop = topContent.querySelectorAll('p');
+//Change text content
+headersTop[0].textContent = siteContent['main-content']['features-h4'];
+textTop[0].textContent = siteContent['main-content']['features-content'];
+headersTop[1].textContent = siteContent['main-content']['about-h4'];
+textTop[1].textContent = siteContent['main-content']['about-content'];
+
+//--Bottom Content
+//Assign variables
 const bottomContent = document.querySelector('.bottom-content');
+const headersBottom = bottomContent.querySelectorAll('h4');
+const textBottom = bottomContent.querySelectorAll('p');
+//Change text content
+headersBottom[0].textContent = siteContent['main-content']['services-h4'];
+textBottom[0].textContent = siteContent['main-content']['services-content'];
+headersBottom[1].textContent = siteContent['main-content']['product-h4'];
+textBottom[1].textContent = siteContent['main-content']['product-content'];
+headersBottom[2].textContent = siteContent['main-content']['vision-h4'];
+textBottom[2].textContent = siteContent['main-content']['vision-content'];
 //----END-----\\
 
 
