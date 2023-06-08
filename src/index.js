@@ -54,36 +54,44 @@ accentImg.src = siteContent['images']['accent-img'];
 //----NAVBAR && CTA----\\
 //Assign variables
 const navBar = document.querySelector('nav');
+const navBarLinks = document.querySelectorAll('nav a');
 const header = document.querySelector('h1');
 const getStartedBtn = document.querySelector('button');
 
+navBarLinks.forEach(link => link.classList.add('italic'));
+
 header.textContent = siteContent['cta']['h1'];
 getStartedBtn.textContent = siteContent['cta']['button'];
+
+
 //----END----\\
 
 
 
 //----MAIN CONTENT----\\
-
+const topContent = document.querySelector('.top-content')
+const bottomContent = document.querySelector('.bottom-content');
 //----END-----\\
 
 
 
-//----FOOTER && CONTACT----\\
+//----CONTACT && FOOTER----\\
 //--Contact
 //Assign variables
-const contactHeader = document.querySelector('.contact h4');
-const contactAddress = document.querySelector('.contact p:nth-of-type(1)');
-const contactPhone = document.querySelector('.contact p:nth-of-type(2)');
-const contactEmail = document.querySelector('.contact p:nth-of-type(3)');
+const contactSection = document.querySelector('.contact');
+const contactHeader = contactSection.querySelector('h4');
+const contactAddress = contactSection.querySelector('p');
+const contactPhone = contactSection.querySelector('p:nth-of-type(2)');
+const contactEmail = contactSection.querySelector('p:nth-of-type(3)');
 //Change text content
 contactHeader.textContent = siteContent['contact']['contact-h4'];
 contactAddress.textContent = siteContent['contact']['address'];
 contactPhone.textContent = siteContent['contact']['phone'];
 contactEmail.textContent = siteContent['contact']['email'];
+
 //--Footer
 //Assign variables
-const footer = document.querySelector('footer');
+const footer = document.querySelector('footer a');
 //Add class and textcontent
 footer.classList.add('bold');
 footer.textContent = siteContent['footer']['copyright'];
