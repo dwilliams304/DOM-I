@@ -52,15 +52,15 @@ accentImg.src = siteContent['images']['accent-img'];
 
 
 //----NAVBAR && CTA----\\
-//==NavBar
+//--NavBar
 //Assign variables
 const navBar = document.querySelector('nav');
 const navBarLinks = document.querySelectorAll('nav a');
 const navBarText = Object.values(siteContent.nav);
-
+//Loop through each individual navlink in the navbar, assign text to corresponding index in nav-items
 navBarLinks.forEach((link, i) => {
-  link.classList.add('italic')
-  link.textContent = navBarText[i];
+  link.classList.add('italic') //Add italic class to all
+  link.textContent = navBarText[i]; //Change text content
 });
 //--CTA
 //Assign variables
@@ -69,8 +69,6 @@ const getStartedBtn = document.querySelector('.cta button');
 //Change text content
 header.textContent = siteContent['cta']['h1'];
 getStartedBtn.textContent = siteContent['cta']['button'];
-
-
 //----END----\\
 
 
